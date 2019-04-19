@@ -126,7 +126,7 @@ public class ChatServer {
                             } else if ("take_a_picture".equals(topic)) {  //拍照
                                 logger.info("已将 take_a_picture 消息 加入到rabbitmq队列："+object.toString());
                             } else {   //人脸检测与识别结果上传中没有“topic”字段
-
+                                logger.info("topic 内容格式不正确");
                             }
                         }else{
                             logger.error("客户端消息格式不正确");
